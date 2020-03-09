@@ -1,2 +1,2 @@
 # bow
-graphical database client for David DBMS
+Graphical database client for David DBMS
