@@ -17,41 +17,20 @@ Here is a preliminary draft of the user interface.
 
 <img src="gui_draft.png">
 
-Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän tehtävälistaan.
+On the left we have DbObjects Tree. This shows all the database objects like
+1. Relvars and Views
+2. Constraints
+3. Domains
+DbObjects are organized in a hierarchical fashion like filesystem. So there will be also Folder objects but they have only organisational function.
 
-## Perusversion tarjoama toiminnallisuus
+Of course there needs to be a dialog where user can specify the url and credentials for the dbms he wants to administer. I will limit Bow so that the user can have only one connection open at a time.
 
-### Ennen kirjautumista
+On the right side we see the DataArea. This is tabbed so that user can have open as many queries at a time as he wants. This area is divided into TableView where we show results of the query, QueryArea where user can define the input he wants to send to the server and MonitoringArea that reports about important events happening at the protocol level and especially all the exceptions that the server (or client) throws.
 
-- käyttäjä voi luoda järjestelmään käyttäjätunnuksen
-  - käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä
+## Functionality
 
-- käyttäjä voi kirjautua järjestelmään
-  - kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus kirjautumislomakkeelle
-  - jos käyttäjää ei olemassa, ilmoittaa järjestelmä tästä
-
-### Kirjautumisen jälkeen
-
-- käyttäjä näkee omat tekemättömät työt eli _todot_
-
-- käyttäjä voi luoda uuden todon
-  - luou todo näkyy ainoastaan sen luoneelle käyttäjälle
-
-- käyttäjä voi merkitä todon tehdyksi, jolloin todo häviää listalta
-
-- käyttäjä voi kirjautua ulos järjestelmästä
-
-## Jatkokehitysideoita
-
-Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
-
-- tehdyksi merkittyjen todojen tarkastelu
-- tehdyksi merkittyjen todojen merkkaaminen tekemättömiksi
-- todon tietojen editointi
-- todojen järjestely tärkeysjärjestykseen
-- todojen määrittely muille käyttäjille
-- käyttäjätiimit, jotka näkevät kaikki yhteiset todot
-- mahdollisuus useampaan erilliseen todo-listaan
-- lisätään todoon kenttä, johon on mahdollista merkitä tarkempia todoon liittyviä tietoja
-- käyttäjien yhteyteen salasana, joka vaaditaan kirjautuessa
-- käyttäjätunnuksen (ja siihen liittyvien todojen) poisto
+- define different connections to David servers
+- ability to connect to one server at a time
+- ability to see all the DbObjects in a tree
+- ability to write input in D* language, send it to server and show results or errors
+- ability to create new tabs in the DataArea
