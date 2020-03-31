@@ -15,7 +15,7 @@ Bow connects to a David server using credentials and it is up to David to determ
 
 Here is a preliminary draft of the user interface.
 
-<img src="">
+<img src="gui_draft.png">
 
 Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän tehtävälistaan.
 
